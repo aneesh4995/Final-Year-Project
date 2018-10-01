@@ -1,0 +1,10 @@
+300: ftp://ftp.ncbi.nlm.nih.gov/dbgap/studies/phs000168/phs000168.v2.p2/pheno_variable_summaries/
+200: filename content-length last-modified file-type
+201: "datadict_v2.xsl" 4338 Sun%2C%2014%20Aug%202014%2000%3A00%3A00 FILE 
+201: "phs000168.v2.pht000707.v2.LOAD610K_Subject_Phenotypes.data_dict.xml" 16725 Sun%2C%2028%20Apr%202015%2000%3A00%3A00 FILE 
+201: "phs000168.v2.pht000707.v2.p2.LOAD610K_Subject_Phenotypes.var_report.xml" 430668 Sun%2C%2028%20Apr%202015%2000%3A00%3A00 FILE 
+201: "phs000168.v2.pht000708.v2.LOAD610K_Subject.data_dict.xml" 2583 Sun%2C%2028%20Apr%202015%2000%3A00%3A00 FILE 
+201: "phs000168.v2.pht000708.v2.p2.LOAD610K_Subject.var_report.xml" 27024 Sun%2C%2028%20Apr%202015%2000%3A00%3A00 FILE 
+201: "phs000168.v2.pht000709.v2.LOAD610K_Pedigree.data_dict.xml" 1302 Sun%2C%2028%20Apr%202015%2000%3A00%3A00 FILE 
+201: "phs000168.v2.pht000709.v2.p2.LOAD610K_Pedigree.var_report.xml" 22874 Sun%2C%2028%20Apr%202015%2000%3A00%3A00 FILE 
+201: "varreports_v3.xsl" 8697 Sun%2C%2014%20Aug%202014%2000%3A00%3A00 FILE 
