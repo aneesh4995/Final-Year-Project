@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 
+<head>
+    <title>Heart disease risk prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+    body {
+
+      background-image:url("https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif");
+      height:100%;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    .result
+    {
+
+      font-family: 'Josefin Slab', serif;
+      font-size:20px;
+      /*font-family: 'Open Sans Condensed', sans-serif;*/
+      color:black;
+      text-align: center;
+      font-weight: 100;
+      position:relative;
+      margin:20px;
+      padding:2px;
+    }
+
+
+     h2 {
+        color:  red;
+        }
+      h3{
+        color:  green;
+        }   
+
+        #img
+        {
+          position:relative;
+          left:32%;
+        }
+        #imgcaption
+        {
+           position:relative;
+          left:46%;
+          font-family: 'Pangolin', cursive;
+        }
+
+
+    .container {
+    position: relative;
+    max-width: 900px; /* Maximum width */
+    margin: 0 auto; /* Center it */
+}
+
+.container .content {
+    position: center; /* Position the background text */
+    top: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+</style>
+ </head>
+<body>
+ 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Heart Disease Prediction</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="/predict">Predict</a></li>
+      <li><span class="glyphicons glyphicons-stats"></span><a href="/">Team</a></li>
+      
+    </ul>
+  </div>
+</nav>  
+    
+<div class="container">
+  <div class = "content">
+  {% if data['Prediction']==1 %}
+
+  <h3>You are at  high risk of having disease!!!i</h3></br>
+ {% else %}
+
+
+
+<h3>Congrats!!You are not at the risk of having the disease.</h3></br>
+
+
+ {% endif %}<br>
+
+
+</div>
+</div>
+<!--
+<span id="imgcaption">ROC GRAPH</span>
+
+<div class="imgdivision">
+<img id="img" src="/static/roc.png"/>
+</div>-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

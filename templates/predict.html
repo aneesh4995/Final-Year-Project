@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 
+<head>
+    <title>Heart Disease Risk Prediction</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style type="text/css">
+                
+        body {
+    background-image:url('https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: relative;
+    background-position: center-5px;
+    height:110%;
+    width:100%;
+         }
+         .container{
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .container .content{
+            
+            position: center; /* Position the background text */
+            top: 0; /* At the bottom. Use top:0 to append it to the top */
+            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+            color: #f1f1f1; /* Grey text */
+            width: 100%; /* Full width */
+            padding: 20px; /* Some padding */
+        } 
+        .button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 15px 35px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+              }
+
+           h2 {
+        color:  #f1f1f1;
+        }    
+
+        .button:hover {
+            background-color: green;
+              } 
+         input[type=text] {
+           border: 2px solid green;
+           border-radius: 4px;
+           width: 800px;
+           height:40px;
+           color: black;
+               }
+        
+
+         select{
+           border: 2px solid green;
+           border-radius: 4px;
+           width: 800px;
+           height:40px;
+           color: black;
+         }     
+         form{
+
+            width: 800px;
+            margin: 0 auto;
+         }               
+    </style>
+  
+
+</head>
+
+ 
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Heart Disease Prediction</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+     <li class="active"><a href="/index">Home</a></li>
+      <li class="active"><a href="/input">Predict</a></li>
+     
+      
+    </ul>
+  </div>
+</nav>     
+        
+    
+ 
+
+     
+      
+        
+        <div class="container">
+        <div class="content">
+        <form action = "/predict" method = "POST">
+           <!--<div style="width: 50%; float: left;">-->
+             <h2><center>Please Enter the following details</center></h2>
+             Age:   <br><input type="text" name="age" placeholder="Between 30 to 80 years" id="age" required/><br>
+             Sex:   <br><select name="sex">
+                    <option value="" disabled selected>Sex
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select><br>
+             Chest Pain Type:   <br><select name="cpt">
+                    <option value="" disabled selected>Chest pain type
+                    <option value="1">Typical Angina</option>
+                    <option value="2">Atypical Angina</option>
+                    <option value="3">Non Anginal Pain</option>
+                    <option value="4">Asymptotic</option>
+                </select><br>
+             Blood Pressure:   <br><input type="text" id="rbp" name="rbp" placeholder="Resting Blood Pressure (50-300 only)" ><br>
+            Cholestrol level:  <br><input type="text" id="chol" name="chol" placeholder="Serum Cholestral in mg/dl(<200 healthy)" ><br>
+               Fasting Blood Pressure: <br><select name="fbs">
+                    <option value="" disabled selected>Fasting Blood Pressure
+                    <option value="0">Present</option>
+                    <option value="1">Not Present</option>
+                </select><br>
+
+               ECG Value: <br><select name="ecg">
+                    <option value="" disabled selected>Resting Ecg Values
+                    <option value="0">Normal</option>
+                    <option value="1">Having ST-T Wave Abnormality</option>
+                    <option value="2">Showing Left Ventricular Hypertrophy</option>
+                </select><br>
+                Heart Rate:<br><input type="text" id="hr" name="hr" placeholder="Maximum heart rate achieved" required/><br> 
+                Excersise Induced Angina :<br><select name="eia">
+                    <option value="" disabled selected>Exercise Induced Angina
+                    <option value="0">NO</option>
+                    <option value="1">YES</option>
+                </select><br>
+               Oldpeak: <br><input type="text" id="old" name="oldpeak" placeholder="Oldpeak" required/><br>
+            <!--</div>
+            <div style="width: 40%;float: right;">-->           
+                Slope:<br><select name="slope">
+                    <option value="" disabled selected>Slope Of The Peak Exercise ST Segment 
+                    <option value="1">Upsloping</option>
+                    <option value="2">Flat</option>
+                    <option value="3">Downsloping</option>                   
+                </select><br>
+               Blood Vessels: <br><select name="nov">
+                    <option value="" disabled selected>No. Of Major Blood Vessels
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select><br>
+                Thal: <br><select name="thal">
+                    <option value="" disabled selected>Thal
+                    <option value="3">Normal</option>
+                    <option value="6">Fixes Defect</option>
+                    <option value="7">Reversable Effect</option>
+                </select><br>
+                RAF in Child (rs10757278):<br><input type="text" id="1c" name="rafg1C" placeholder="Value should between 0 and 1" required/><br>
+                RAF in Mother (rs10757278): <br><input type="text" id="1m" name="rafg1M" placeholder="Value should between 0 and 1" required/><br>
+                RAF in Father (rs10757278):<br><input type="text" id="1f" name="rafg1F" placeholder="Value should between 0 and 1" required/><br>
+                RAF in Child (rs2383207): <br><input type="text" id="2c" name="rafg2C" placeholder="Value should between 0 and 1" required/><br>
+                RAF in Mother (rs2383207): <br><input type="text" id="2m" name="rafg2M" placeholder="Value should between 0 and 1"required/><br>
+                RAF in Father (rs2383207): <br><input type="text" id="2f" name="rafg2F" placeholder="Value should between 0 and 1"required/><br>
+                <br><p><button class="button" type="submit">Predict</button></p><br><br>               
+        </form> 
+        <!--{% if label1 %} {{ label1 }} {% endif %}<br><br>
+        {% if label2 %} {{ label2 }} {% endif %}-->
+        </div>
+       </div> 
+    </body>
+ 
+</html>
